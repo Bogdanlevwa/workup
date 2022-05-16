@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+   box-sizing:border-box;
+   padding: 0;
+   margin: 0;
+   font-family: 'Open Sans';
+}
+body{
+   height: 100vh;
+   background-color: #25242c;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 30px;
+}
+a{
+   text-decoration: none;
+   font-size: 2.5em;
+   text-transform: uppercase;
+   padding: 10px 30px;
+   background: #f2f2f2;
+   position: relative;
+   transition: 0.3s;
+   letter-spacing: 0.1em;
+   color: #f2f2f2;
+   &:hover{
+      letter-spacing: 0.25em;
+      background-color: var(--clr);
+      box-shadow: 0 0 35px var(--clr);
+      color: var(--clr);
+      i{
+         &:before{
+            left: 20%;
+            width: 35px;
+         }
+         &:after{
+            left: 80%;
+            width: 35px;
+         }
+      }
+   }
+   &:before{
+      content: '';
+      position: absolute;
+      inset: 4px;
+      background-color: #25242c;
+   }
+   span{
+      position: relative;
+      z-index: 2;
+   }
+   i{
+      position: absolute;
+      display: block;
+      inset: 0;
+      &:before{
+         content: '';
+         position: absolute;
+         top: 0;
+         width: 20px;
+         height: 4px;
+         left: 80%;
+         background-color: #25242c;
+         transform: translateX(-50%) skew(325deg);
+         transition: 0.3s;
+      }
+      &:after{
+         content: '';
+         position: absolute;
+         bottom: 0;
+         width: 20px;
+         height: 4px;
+         left: 20%;
+         background-color: #25242c;
+         transform: translateX(-50%) skew(325deg);
+         transition: 0.3s;
+      }
+   }
+}
